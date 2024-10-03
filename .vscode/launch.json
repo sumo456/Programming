@@ -1,0 +1,46 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "M3_UF1_A02_03",
+            "request": "launch",
+            "mainClass": "M3_UF1_A02_03",
+            "projectName": "Programming_ee1eed9f"
+        },
+        {
+            "type": "java",
+            "name": "con2id02",
+            "request": "launch",
+            "mainClass": "con2id02",
+            "projectName": "Programming_ee1eed9f"
+        },
+        {
+            "type": "java",
+            "name": "con2if",
+            "request": "launch",
+            "mainClass": "Condicionales.con2if",
+            "projectName": "Programming_ee1eed9f"
+        },
+        {
+            "type": "java",
+            "name": "con2if",
+            "request": "launch",
+            "mainClass": "con2if",
+            "projectName": "Programming_ee1eed9f"
+        },
+        {
+            "type": "java",
+            "name": "OperacionesBasicas",
+            "request": "launch",
+            "mainClass": "OperacionesBasicas",
+            "projectName": "Programming_ee1eed9f"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Iniciar Chrome para localhost",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
