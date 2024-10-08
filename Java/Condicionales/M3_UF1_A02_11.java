@@ -8,7 +8,7 @@ public class M3_UF1_A02_11 {
 
         //Pedir valores para las variables
         System.out.print("Introduce el valor de a: ");
-        int a = input.nextInt();
+        int a = input.nextInt(); //Leemos el valor de a desde consola
 
         System.out.print("Introduce el valor de b: ");
         int b = input.nextInt();
@@ -17,6 +17,7 @@ public class M3_UF1_A02_11 {
         int c = input.nextInt();
 
         //Determina el valor menor
+        //Inicializamos la variable 'menor' con el valor de 'a'
         int menor = a;
         if (b < menor) {
             menor = b;
