@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class M3_UF1_A02_022 {
     public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
