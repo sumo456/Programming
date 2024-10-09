@@ -1,0 +1,143 @@
+
+1. Algoritmos y Estructuras de Repetición
+
+Tipos de Estructuras Repetitivas:
+- Estructura "Mentre ... Fer" (while):
+  Se repite una secuencia de acciones mientras una condición booleana sea verdadera.
+  Pseudocódigo:
+    MENTRE <Expresión_booleana> FER
+        <Secuencia de sentencias>
+    FI_MENTRE
+
+- Estructura "Fer Mentre" (do-while):
+  Similar a "while", pero la secuencia de acciones se ejecuta al menos una vez antes de evaluar la condición.
+  Pseudocódigo:
+    REPETIR
+        <Secuencia de sentencias>
+    MENTRE <Expresión_booleana>
+
+- Estructura "Per a" (for):
+  Ejecuta un bloque de código un número determinado de veces, controlado por una variable.
+  Pseudocódigo:
+    PER A (VC = LI, LF, INC) FER
+        <Secuencia de acciones>
+    FIN_PER_A
+
+Ejemplos Prácticos:
+- Suma de los 5 primeros números naturales:
+  Inici
+  num = 1
+  suma = 0
+  MENTRE (num <= 5) FER
+      suma = suma + num
+      num = num + 1
+  FI_MENTRE
+  Imprimir "La suma es: ", suma
+  Fi
+
+- Suma de números positivos ingresados por el usuario (termina con 0):
+  Inici
+  suma = 0
+  Llegir num
+  MENTRE (num != 0) FER
+      suma = suma + num
+      Llegir num
+  FI_MENTRE
+  Imprimir "La suma es: ", suma
+  Fi
+
+2. Estructuras de Repetición en Java
+
+Estructuras Repetitivas en Java:
+- Estructura "while":
+  while (expresión_booleana) {
+      // Sentencias
+  }
+
+- Estructura "do-while":
+  do {
+      // Sentencias
+  } while (expresión_booleana);
+
+- Estructura "for":
+  for (int i = 1; i <= 10; i++) {
+      System.out.println("El número es: " + i);
+  }
+
+Ejemplos:
+- while:
+  int numero = 1;
+  while (numero <= 10) {
+      System.out.println("El número es: " + numero);
+      numero++;
+  }
+
+- do-while:
+  int numero = 1;
+  do {
+      System.out.println("El número es: " + numero);
+      numero++;
+  } while (numero <= 10);
+
+- for:
+  for (int numero = 1; numero <= 10; numero++) {
+      System.out.println("El número es: " + numero);
+  }
+
+3. Estructuras de Selección en Algoritmos
+
+Estructuras de Selección:
+- Estructura Simple (if-then):
+  Permite ejecutar acciones si se cumple una condición.
+  Pseudocódigo:
+    Si (condición) Llavors
+        <Acciones>
+    FiSi
+
+- Estructura Doble (if-then-else):
+  Se ejecuta un bloque de código si la condición es verdadera, y otro si es falsa.
+  Pseudocódigo:
+    Si (condición) Llavors
+        <Acciones A>
+    Sino
+        <Acciones B>
+    FiSi
+
+- Estructura Múltiple (switch):
+  Se evalúa una expresión y se ejecuta el caso correspondiente.
+  Pseudocódigo:
+    Segons (Expresió) Fes
+        Cas Expr. = 1: <Acciones>
+        Cas Expr. = 2: <Acciones>
+        En_Altre_Cas: <Acciones>
+    FiSegons_Cas
+
+Ejemplos Prácticos:
+- Determinar el número mayor entre dos números:
+  Si (A > B) Llavors
+      Visualitza "El més gran és A"
+  Sino
+      Visualitza "El més gran és B"
+  FiSi
+
+4. Estructuras de Selección en Java
+
+Estructuras en Java:
+- if-else:
+  if (condición) {
+      // Sentencias si verdadero
+  } else {
+      // Sentencias si falso
+  }
+
+- switch:
+  switch (valor) {
+      case 1:
+          // Acciones para el caso 1
+          break;
+      case 2:
+          // Acciones para el caso 2
+          break;
+      default:
+          // Acciones para cualquier otro caso
+  }
