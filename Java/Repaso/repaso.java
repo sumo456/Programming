@@ -61,6 +61,8 @@ public class repaso {
         } while (!validacion.validarNumeroPositivo(escudo_reg) || !validacion.validarEscudoReg(escudo_reg));
 
         int accion = 0;
+        int dano = 0;
+        int danoRestante = dano;
         do {
             System.out.print("1 - Rebre mal d'atac. \n2 - Utilizar 'botiquin'. \n3 - Beure poció petita. \n4 - Beure poció gran. \n5 - Rebre mal de caiguda.\n");
             accion = sc.nextInt();
@@ -68,8 +70,8 @@ public class repaso {
                 System.out.println("Escoge un número entre 1 y 5");
             } else if (accion == 1 ){
                 System.out.println("Cuantos puntos de daño has recibido? ");
-                int dano = sc.nextInt();
-                int danoRestante = dano;
+                dano = sc.nextInt();
+                danoRestante = dano;
 
                 if (escudo_reg > 0) { 
                     if (escudo_reg >= danoRestante){
@@ -79,7 +81,6 @@ public class repaso {
                         danoRestante -= escudo_reg;  // danoRestante -= escudo_reg | resta el valor de escudo_reg
                         escudo_reg = 0;
                     }
-                    System.out.println("Tu escudo actual regenerativo es de " + escudo_reg + ", tu escudo actual es de " + escudo + ", tu vida actual es de " + vida);
                 }
                 if (danoRestante > 0 && escudo > 0) {
                     if (escudo >= danoRestante) {
@@ -88,19 +89,28 @@ public class repaso {
                     } else {
                         danoRestante -= escudo;
                         escudo = 0;
-                        System.out.println("Tu escudo actual regenerativo es de " + escudo_reg + ", tu escudo actual es de " + escudo + ", tu vida actual es de " + vida);
                     }
+                }
                 if (danoRestante > 0 && vida > 0 ) {
                     vida -= danoRestante;
                     if (vida < 0) {
                         vida = 0;
                     }
-                    System.out.println("Tu escudo actual regenerativo es de " + escudo_reg + ", tu escudo actual es de " + escudo + ", tu vida actual es de " + vida);
                     if (vida == 0) {
                         System.out.println("Has muerto. No te queda vida");
                     }
                 }
-            }
+                System.out.println("Tu escudo actual regenerativo es de " + escudo_reg + ", tu escudo actual es de " + escudo + ", tu vida actual es de " + vida);
+            } else if (accion == 5){
+                System.out.println("Cuantos puntos de daño has recibido? ");
+                int danoCaida = sc.nextInt();
+                if (danoCaida >= vida){
+                    vida = 0;
+                    System.out.println("Has muerto");
+                } else {
+                    vida -= danoCaida;
+                    System.out.println("Tu escudo actual regenerativo es de " + escudo_reg + ", tu escudo actual es de " + escudo + ", tu vida actual es de " + vida);
+                }
             } else {
                 System.out.println("No se aplicó daño");
             }
