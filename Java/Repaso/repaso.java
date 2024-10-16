@@ -67,9 +67,34 @@ public class repaso {
             if (!validacion.validarSeleccion(accion)) {
                 System.out.println("Escoge un número entre 1 y 5");
             } else if (accion == 1 || accion == 5){
-                System.out.println("Cuantos puntos de daño he recibido? ");
-                int daño = sc.nextInt();
-                System.out.println("Tu vida actual es de " + (vida - daño) + "\n ");
+                System.out.println("Cuantos puntos de daño has recibido? ");
+                int dano = sc.nextInt();
+                int danoRestante = dano;
+                // Si el escudo reg tiene puntos entonces absorbe el daño
+                if (escudo_reg > 0) { 
+                    if (escudo_reg >= danoRestante){
+                        escudo_reg -= danoRestante;
+                        danoRestante = 0;
+                    } else {// Si el daño restante es menor o igual al del escudo el escudo se queda a 0
+                        danoRestante -= escudo_reg;  // danoRestante -= escudo_reg | resta el valor de escudo_reg
+                        escudo_reg = 0;
+                    }
+                    System.out.println("Tu escudo actual es de " + escudo_reg);
+                }
+                if (danoRestante > 0 && escudo > 0) {
+                    if (escudo >= danoRestante) {
+                        escudo -= danoRestante;
+                        danoRestante = 0;
+                    } else {
+                        danoRestante -= escudo;
+                        escudo = 0;
+                    }
+                if (vida == 0) {
+                    System.out.println("Has muerto. No te queda vida.");
+                }
+                }
+            } else {
+                System.out.println("No se aplicó daño");
             }
     } while (!validacion.validarSeleccion(accion));
 
