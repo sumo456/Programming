@@ -111,7 +111,9 @@ public class repaso {
                     vida -= danoCaida;
                     System.out.println("Tu escudo actual regenerativo es de " + escudo_reg + ", tu escudo actual es de " + escudo + ", tu vida actual es de " + vida);
                 }
-            } else {
+            } else if (accion == 2) {
+                vida = 100;
+            }else {
                 System.out.println("No se aplicó daño");
             }
     } while (!validacion.validarSeleccion(accion));
