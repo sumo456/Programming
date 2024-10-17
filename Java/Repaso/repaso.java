@@ -3,23 +3,27 @@ package Programming.Java.Repaso;
 import java.util.Scanner;
 
 /**
-*
-* @author DanielSalvador
-*/
+ *
+ * @author DanielSalvador
+ */
 
 public class repaso {
-    public boolean validarNumeroPositivo(int numero){
+    public boolean validarNumeroPositivo(int numero) {
         return numero > 0;
     }
-    public boolean validarEscudoReg(int escudo_reg){
+
+    public boolean validarEscudoReg(int escudo_reg) {
         return escudo_reg <= 50;
     }
-    public boolean validarVidaEscudo(int numero){
+
+    public boolean validarVidaEscudo(int numero) {
         return numero <= 100;
     }
-    public boolean validarSeleccion(int seleccion){
+
+    public boolean validarSeleccion(int seleccion) {
         return seleccion >= 1 && seleccion <= 5;
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         repaso validacion = new repaso();
@@ -109,11 +113,32 @@ public class repaso {
                     System.out.println("Has muerto");
                 } else {
                     vida -= danoCaida;
-                    System.out.println("Tu escudo actual regenerativo es de " + escudo_reg + ", tu escudo actual es de " + escudo + ", tu vida actual es de " + vida);
+                    System.out.prrepasointln("Tu escudo actual regenerativo es de " + escudo_reg + ", tu escudo actual es de " + escudo + ", tu vida actual es de " + vida);
                 }
             } else if (accion == 2) {
                 vida = 100;
-            }else {
+            }else if (accion == 3){
+                if (escudo < 50){
+                    if (escudo + 25 > 50) {// si la suma del escudo y el escudo actual es menor a 50 entonces se pone el escudo a 50
+                        escudo = 50;
+                        System.out.println("Has bebido una pocion pequeña. Ahora tu escudo es de: " + escudo);
+                    } else {
+                        escudo += 25;//si no es mayor a 50 la suma del escudo actual mas 25 entonces se suma 25
+                        System.out.println("Has bebido una pocion pequeña. El teu escut ara és: " + escudo);
+                    }
+                    
+                } else{
+                    System.out.println("No se ha tomado ningúna poción pequeña. Tu escudo actual regenerativo es de " + escudo_reg + ", tu escudo actual es de " + escudo + ", tu vida actual es de " + vida);
+                }
+            } else if(accion == 4){
+                if (escudo < 100) {
+                    if (escudo + 50 > 100) {
+                        escudo = 100;
+                    } else {
+                        escudo += 50;
+                    }
+                }
+            } else {
                 System.out.println("No se aplicó daño");
             }
     } while (!validacion.validarSeleccion(accion));
