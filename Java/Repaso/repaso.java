@@ -113,7 +113,7 @@ public class repaso {
                     System.out.println("Has muerto");
                 } else {
                     vida -= danoCaida;
-                    System.out.prrepasointln("Tu escudo actual regenerativo es de " + escudo_reg + ", tu escudo actual es de " + escudo + ", tu vida actual es de " + vida);
+                    System.out.println("Tu escudo actual regenerativo es de " + escudo_reg + ", tu escudo actual es de " + escudo + ", tu vida actual es de " + vida);
                 }
             } else if (accion == 2) {
                 vida = 100;
