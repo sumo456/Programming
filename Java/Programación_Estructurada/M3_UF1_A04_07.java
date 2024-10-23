@@ -1,4 +1,4 @@
-package Programming.Java.Programación_Esctructurada;
+package Programming.Java.Programación_Estructurada;
 
 import java.util.Scanner;
 
