@@ -35,7 +35,7 @@ public class M3_UF1_A04_09 {
 
         //Mostrar resultados
         if(encontrado){
-            System.out.println("El numero " + n + "se encuentra en la posicion" + posicion);
+            System.out.println("El numero " + n + " se encuentra en la posicion" + posicion);
         } else {
             System.out.println("El número " + n + " no se encuentra en el vector.");
         }
