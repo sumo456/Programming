@@ -1,5 +1,4 @@
-package Programming.Java.Programación_Estructurada;
-
+package Programming.Java.Matrices_Unidimensionales;
 import java.util.Scanner;
 
 public class M3_UF1_A04_09 {

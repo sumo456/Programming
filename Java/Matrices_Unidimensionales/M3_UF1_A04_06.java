@@ -1,4 +1,4 @@
-package Programming.Java.Programación_Estructurada;
+package Programming.Java.Matrices_Unidimensionales;
 
 import java.util.Scanner;
 
