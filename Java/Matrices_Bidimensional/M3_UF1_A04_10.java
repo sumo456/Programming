@@ -27,10 +27,6 @@ public class M3_UF1_A04_10 {
             }
         }
 
-
-
-        Scanner sc = new Scanner(System.in);
-
         System.out.print("Introdueix el nombre de files (N): ");
         int files = sc.nextInt();
         System.out.print("Introdueix el nombre de columnes (M): ");
@@ -51,13 +47,13 @@ public class M3_UF1_A04_10 {
         }
 
         // Comprovació si la matriu és nul·la
-        boolean esNul·la = true;
+        boolean esNula = true;
         i = 0;
-        while (i < files && esNul·la) {
+        while (i < files && esNula) {
             int j = 0;
             while (j < columnes) {
                 if (matriu[i][j] != 0) {
-                    esNul·la = false;
+                    esNula = false;
                     break;
                 }
                 j++;
@@ -65,7 +61,7 @@ public class M3_UF1_A04_10 {
             i++;
         }
 
-        if (esNul·la) {
+        if (esNula) {
             System.out.println("La matriu és nul·la.");
         } else {
             System.out.println("La matriu no és nul·la.");
