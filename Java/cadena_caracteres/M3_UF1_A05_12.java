@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class M3_UF1_A05_12 {
     public static void main(String[] args) {
          // Crear un objeto Scanner para leer la entrada del usuario
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         // Solicitar al usuario que introduzca una cadena de texto
         System.out.print("Introdueix una cadena de text: ");
-        String text = scanner.nextLine();
+        String text = sc.nextLine();
 
         // Llamar a la función que verifica si es palíndromo
         boolean esPalindrome = esPalindrom(text);
@@ -22,7 +22,7 @@ public class M3_UF1_A05_12 {
         }
 
         // Cerrar el scanner
-        scanner.close();
+        sc.close();
     }
 
     // Función que verifica si una cadena es un palíndromo
