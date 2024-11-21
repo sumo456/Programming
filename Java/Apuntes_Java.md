@@ -1,5 +1,5 @@
 daniel Salvador
-# Java: Apuntes Básicos
+# Java: Apuntes Básicos 
 
 ## 1. Introducción a Java
 - **Java** es un lenguaje de programación orientado a objetos desarrollado por Sun Microsystems (ahora parte de Oracle) en 1995.
