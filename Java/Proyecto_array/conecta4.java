@@ -15,7 +15,7 @@ public class conecta4 {
         char[][] board = new char[rows][cols];
         char EMPTY = ' '; // Para empezar con los valores de la tabla vacios
         boolean gameOn = true;
-        int cuerrentPlayer = 1;
+        int currentPlayer = 1;
         boolean winnerFound = false;
 
         // Inicilizamos el tablero
@@ -55,6 +55,15 @@ public class conecta4 {
             }
             System.out.println();
 
+            // Solicitar movimiento al jugador
+            System.out.println("Turno del jugador " + currentPlayer + ". Introduce la columna (1-" + cols + "):");
+            int column = scanner.nextInt() - 1;
+
+            // Validar la entrada del jugador
+            while (column < 0 || column >= cols || board[rows - 1][column] != EMPTY) {
+                System.out.println("Columna no válida o llena. Inténtalo de nuevo:");
+                column = scanner.nextInt() - 1;
+            }
 
         }
     }
