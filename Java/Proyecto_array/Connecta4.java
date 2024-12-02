@@ -13,7 +13,7 @@ public class Connecta4 {
         int cols = scanner.nextInt();
 
         char[][] board = new char[rows][cols];
-        char EMPTY = ' ';
+        char EMPTY = ' '; // Para empezar con los valores de la tabla vacios
         boolean gameOn = true;
         int currentPlayer = 1;
         boolean winnerFound = false;
@@ -122,7 +122,5 @@ public class Connecta4 {
             // Cambiar de turno
             currentPlayer = (currentPlayer == 1) ? 2 : 1;
         }
-
-        scanner.close();
     }
 }
